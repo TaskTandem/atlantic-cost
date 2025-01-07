@@ -1,0 +1,8 @@
+.home-container {
+  @include flex(column, nowrap, center, center);
+  gap: 2rem;
+  .admin-buttons {
+    @include flex(row, nowrap, center, center);
+    gap: 1rem;
+  }
+}

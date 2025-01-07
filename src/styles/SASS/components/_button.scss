@@ -1,0 +1,21 @@
+.button {
+  @include flex(row, nowrap, center, center);
+  gap: .5rem;
+  width: max-content;
+  background-color: $prim;
+  color: $accent;
+  padding: 1em;
+  margin: auto;
+  border-radius: .5rem;
+  cursor: pointer;
+  svg {
+    font-size: 1.75rem;
+  }
+}
+
+.add-form {
+  padding: .7em;
+  svg {
+    font-size: 1rem;
+  }
+}

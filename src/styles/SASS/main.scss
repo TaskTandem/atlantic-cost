@@ -1,0 +1,21 @@
+//abstract
+@use './abstracts' as *;
+
+//base
+@import './base/$reset';
+@import './base/swiper';
+
+//components
+@import './components/navbar-mobile';
+@import './components/navbar-desktop';
+@import './components/footer';
+@import './components/card';
+@import './components/button';
+@import './components/input';
+
+//pages
+@import './pages/home';
+@import './pages/login';
+@import './pages/add';
+@import './pages/categories';
+@import './pages/search';

@@ -1,0 +1,39 @@
+input {
+  width: 100%;
+  margin: auto;
+  padding: .5em;
+  background-color: $prim;
+  color: black;
+  border-radius: .5rem;
+  transition: all 100ms linear;
+  text-align: center;
+  &:focus {
+    background-color: $secondary;
+  }
+  &::placeholder {
+    color: black;
+  }
+}
+
+textarea {
+  width: 100%;
+  margin: auto;
+  padding: .5em;
+  color: black;
+  background-color: $secondary;
+  border-radius: .5rem;
+  transition: all 100ms linear;
+  text-align: center;
+  resize: none;
+  min-height: 10rem;
+}
+
+select {
+  padding: 0 .5rem;
+  color: $secondary;
+  text-align: center;
+  option {
+    color: black;
+    background: $prim;
+  }
+}
