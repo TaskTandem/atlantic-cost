@@ -56,7 +56,10 @@ onMounted(async () => {
   <div v-if="$W.width > 768" id="navbar">
 
     <div class="logo">
-      <RouterLink to="/">ROCKY STORE</RouterLink>
+      <RouterLink to="/">
+        <img src="../assets/logo.png" alt="logo">
+        <span>ATLANTIC COST</span>
+      </RouterLink>
     </div>
 
     <div class="search">
@@ -100,7 +103,10 @@ onMounted(async () => {
 
     <!-- logo -->
     <div class="logo">
-      <RouterLink to="/">ROCKY STORE</RouterLink>
+      <RouterLink to="/">
+        <span>ATLANTIC COST</span>
+        <img src="../assets/logo.png" alt="logo">
+      </RouterLink>
     </div>
 
     <!-- buscador -->

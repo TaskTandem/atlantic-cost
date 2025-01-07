@@ -7,7 +7,7 @@ import { RouterLink } from 'vue-router';
   <div class="footer-container">
 
     <div class="logo">
-      <RouterLink to="/">ROCKY STORE</RouterLink>
+      <RouterLink to="/">ATLANTIC COST</RouterLink>
     </div>
 
     <div class="social">

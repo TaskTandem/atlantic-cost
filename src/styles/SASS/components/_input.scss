@@ -7,9 +7,6 @@ input {
   border-radius: .5rem;
   transition: all 100ms linear;
   text-align: center;
-  &:focus {
-    background-color: $secondary;
-  }
   &::placeholder {
     color: black;
   }

@@ -7,12 +7,19 @@
   padding: 1rem;
   text-align: center;
   z-index: 10;
+  color: $clr;
   .logo {
     flex-grow: 1;
-    color: $prim;
     transition: color 100ms linear;
     &:hover {
       color: $secondary;
+    }
+    a {
+      @include flex(row, nowrap, center, center);
+      font-size: 1.125rem;
+      img {
+        width: 4rem;
+      }
     }
   }
   .categories {
@@ -20,7 +27,7 @@
     flex-grow: 1;
     > span {
       width: 100%;
-      color: $prim;
+      color: $clr;
       cursor: pointer;
       padding: 1.5rem 0;
       &.active {
@@ -34,7 +41,6 @@
       left: 0;
       right: 0;
       margin: 0 auto;
-      
       .link {
         width: 80%;
         cursor: pointer;
@@ -74,6 +80,9 @@
     input {
       height: 100%;
       font-size: .9rem;
+      &:focus {
+        background: $secondary;
+      }
     }
   }
 }

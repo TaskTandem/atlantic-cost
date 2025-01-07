@@ -2,7 +2,7 @@
   @include flex(row, nowrap, space-between, center);
   padding: 1em 2em;
   margin-bottom: 1em;
-  color: $prim;
+  color: $clr;
   svg {
     font-size: 1.5rem;
   }
@@ -40,7 +40,16 @@
     }
   }
   .logo {
-    font-size: 1.125rem;
+    position: relative;
+    a {
+      @include flex(column, nowrap, center, center);
+      font-size: 1.125rem;
+      img {
+        position: absolute;
+        bottom: -4rem;
+        width: 4rem;
+      }
+    }
   }
   .search-button {
     width: 2rem;
