@@ -297,7 +297,6 @@ body #content {
   position: relative;
   width: 100%;
   max-width: 24rem;
-  border: 2px solid #acacac;
   border-radius: 0.5rem;
   box-shadow: 0 0 1.5rem 0.25rem black;
   overflow: hidden;
@@ -316,7 +315,7 @@ body #content {
   align-items: center;
   width: 100%;
   text-align: center;
-  background: linear-gradient(to top, #111111 70%, transparent);
+  background: linear-gradient(to top, #111111 60%, transparent);
   z-index: 1;
   padding: 1rem;
 }

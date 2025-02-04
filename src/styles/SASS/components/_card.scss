@@ -7,7 +7,6 @@
     position: relative;
     width: 100%;
     max-width: 24rem;
-    border: 2px solid $prim;
     border-radius: .5rem;
     box-shadow: 0 0 1.5rem .25rem black;
     overflow: hidden;
@@ -22,7 +21,7 @@
       @include flex(column, nowrap, center, center);
       width: 100%;
       text-align: center;
-      background: linear-gradient(to top, $bg 70%, transparent);
+      background: linear-gradient(to top, $bg 60%, transparent);
       z-index: 1;
       padding: 1rem;
       .name {
