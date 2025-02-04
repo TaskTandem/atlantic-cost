@@ -15,6 +15,8 @@ const modules = [Pagination];
 const props = defineProps(['data', 'add'])
 const router = useRouter()
 
+console.log(props.data)
+
 const deleteProd = async () => {
   if (confirm('¿Estas seguro que queres eliminar este producto?')) {
     const res = await deleteProduct(props.data.id)
@@ -47,12 +49,6 @@ const deleteProd = async () => {
 
     <div class="information">
       <h1 class="name">{{ data.name }}</h1>
-      <div v-if="data.specifications.length > 0" class="specifications">
-        <p v-for="(desc, index) in data.specifications" :key="index">{{ desc }}</p>
-      </div>
-      <div class="description" v-if="data.description">
-        <p>{{ data.description }}</p>
-      </div>
       <div v-if="data.isAvailable" class="price-container">
         <div v-if="data.price" class="price">
           <span :class="{promotion: data.promotionalPrice !== null}">{{ data.price }}USD</span>
@@ -74,11 +70,6 @@ const deleteProd = async () => {
         <span>Eliminar</span>
       </div>
     </div>
-
-    <a :href="`https://wa.me/5492235458947?text=${'¡Hola! Me interesa este producto: ' + data.name}`" target='_blank' v-if="!logged && !add" class="button">
-      <fa :icon="['fab', 'whatsapp']" />
-      <span>{{ data.isAvailable ? 'Pedir por whatsapp' : 'Consultar por whatsapp' }}</span>
-    </a>
 
   </div>
 </template>
