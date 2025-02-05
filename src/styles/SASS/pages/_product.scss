@@ -1,0 +1,4 @@
+.product-container {
+  @include flex(column, nowrap, flex-start, center);
+  height: calc(100vh - 7.75rem);
+}

@@ -1,7 +1,7 @@
 #navbar_mobile {
   @include flex(row, nowrap, space-between, center);
   padding: 1em 2em;
-  margin-bottom: 3em;
+  margin-bottom: 4rem;
   color: $clr;
   svg {
     font-size: 1.5rem;
@@ -24,7 +24,7 @@
       left: -105%;
     }
     &.disabledR {
-      left: 105%;
+      right: -105%;
     }
     svg {
       align-self: start;
@@ -55,6 +55,9 @@
     width: 2rem;
   }
   .search {
+    left: unset;
+    right: 0;
+    max-width: 600px;
     height: auto;
     .search-bar {
       width: 100%;

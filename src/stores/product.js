@@ -2,13 +2,13 @@ import { defineStore } from 'pinia'
 import { fetchWrapper } from '../helpers/fetchWrapper'
 
 export const useProductStore = defineStore('product', () => {
-
   const getProducts = async () => {
     try {
       const res = await fetchWrapper.get('products?isDeleted=false')
       return res
     } catch (e) {
       console.log('Error al traer productos', e);
+      return false
     }
   }
 

@@ -15,8 +15,6 @@ const modules = [Pagination];
 const props = defineProps(['data', 'add'])
 const router = useRouter()
 
-console.log(props.data)
-
 const deleteProd = async () => {
   if (confirm('¿Estas seguro que queres eliminar este producto?')) {
     const res = await deleteProduct(props.data.id)
@@ -27,10 +25,11 @@ const deleteProd = async () => {
     }
   }
 }
+
 </script>
 
 <template>
-  <div class="card-container">
+  <div class="card-container" @click="router.push(`/producto/${data.id}`)">
 
     <div v-if="data.images.length > 0" class="images">
       <swiper

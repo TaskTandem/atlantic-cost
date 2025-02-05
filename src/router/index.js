@@ -5,6 +5,7 @@ import AddView from '../views/AddView.vue'
 import CategoriesView from '../views/CategoriesView.vue'
 import SearchView from '../views/SearchView.vue'
 import CategoryView from '../views/CategoryView.vue'
+import ProductView from '../views/ProductView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,8 +33,15 @@ const router = createRouter({
     {
       path: '/categories',
       component: CategoriesView
+    },
+    {
+      path: '/producto/:id',
+      component: ProductView
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0 };
+  }
 })
 
 export default router

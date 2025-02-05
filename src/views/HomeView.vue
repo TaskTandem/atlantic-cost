@@ -6,15 +6,17 @@ import { RouterLink } from 'vue-router'
 //components
 import CardContainer from '@/components/CardContainer.vue';
 //store
-import { useProductStore, useAdminStore, useWindowStore } from '@/stores'
+import { useProductStore, useAdminStore } from '@/stores'
 const $P = useProductStore()
-const $W = useWindowStore()
 const { logged } = useAdminStore()
 
-const products = ref()
+const products = ref(null)
+const error = ref(false)
 
 onMounted(async () => {
-  products.value = await $P.getProducts()
+  const res = await $P.getProducts()
+  if(res) products.value = res
+  else error.value = true
 })
 </script>
 
@@ -28,6 +30,10 @@ onMounted(async () => {
         <span>Agregar producto</span>
       </RouterLink>
     </div>
-    <CardContainer :data="products" />
+    <div v-if="!products && !error" class="loading"><fa icon="spinner" /></div>
+    <div v-else-if="!products && error" class="error">
+      <p>Hubo un error al cargar los productos. Intentelo mas tarde.</p>
+    </div>
+    <CardContainer v-else :data="products" />
   </div>
 </template>

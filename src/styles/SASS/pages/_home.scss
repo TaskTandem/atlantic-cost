@@ -6,3 +6,33 @@
     gap: 1rem;
   }
 }
+
+.loading {
+  position: fixed;
+  display: grid;
+  place-content: center;
+  top: 0;
+  left: 0;
+  background-color: $bg;
+  width: 100vw;
+  height: 100vh;
+  svg {
+    width: 2rem;
+    height: 2rem;
+    animation: rotate 1500ms linear infinite;
+  }
+}
+.error {
+  @include flex(column, nowrap, center, center);
+  gap: 1rem;
+  text-align: center;
+  margin: auto;
+  p {
+    font-size: 1.25rem;
+    max-width: 80%;
+  }
+  button {
+    background-color: $prim;
+    padding: .5em 1em;
+  }
+}
